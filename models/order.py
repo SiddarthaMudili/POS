@@ -1,5 +1,7 @@
-from config.db import get_db
 from datetime import datetime
+
+from config.db import get_db
+
 
 def save_order(form_data):
     db = get_db()
@@ -9,7 +11,11 @@ def save_order(form_data):
 
     for data in item_ids:
         item_id, item_name, variant_name, unit_price = data.split("|")
-        quantity_field = f"quantity_{item_id}" if variant_name == "None" else f"quantity_{item_id}_{variant_name}"
+        quantity_field = (
+            f"quantity_{item_id}"
+            if variant_name == "None"
+            else f"quantity_{item_id}_{variant_name}"
+        )
         quantity = int(form_data.get(quantity_field, 1))
         total_price += float(unit_price) * quantity
 
@@ -26,9 +32,6 @@ def save_order(form_data):
 
         items.append(item)
 
-    db.orders.insert_one({
-        "items": items,
-        "total": float(total_price),
-        "timestamp": datetime.now()
-    })
-
+    db.orders.insert_one(
+        {"items": items, "total": float(total_price), "timestamp": datetime.now()}
+    )
