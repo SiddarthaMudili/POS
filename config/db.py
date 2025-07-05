@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 
+
 def get_db():
-    client = MongoClient('mongodb://localhost:27017/')
-    return client['restaurant']
+    client = MongoClient("mongodb://mongo_host:27017/")
+    return client["restaurant"]
