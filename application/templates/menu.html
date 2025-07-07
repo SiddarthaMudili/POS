@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="menu-container">
+    <a href="/sale" class="submit-btn">View Orders</a>
+    <h2>Menu</h2>
+    <form method="POST" action="/order" class="menu-form">
+
+        {% for item in menu %}
+        <div class="menu-item">
+            <h4>{{ item.name }}</h4>
+
+            {% if item.variants %}
+            {% for v in item.variants %}
+            <label class="variant-block">
+                <input type="checkbox" name="item_ids"
+                    value="{{ item._id }}|{{ item.name }}|{{ v.name }}|{{ v.price }}">
+                {{ v.name }} - ${{ v.price }}
+                <input type="number" name="quantity_{{ item._id }}_{{ v.name }}" min="1" value="1">
+            </label>
+            {% endfor %}
+            {% else %}
+            <label class="variant-block">
+                <input type="checkbox" name="item_ids" value="{{ item._id }}|{{ item.name }}|None|{{ item.price }}">
+                ${{ item.price }}
+                <input type="number" name="quantity_{{ item._id }}" min="1" value="1">
+            </label>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <h3>Today's Specials</h3>
+        {% for item in specials %}
+        <div class="menu-item">
+            <h4>{{ item.name }}</h4>
+
+            {% if item.variants %}
+            {% for v in item.variants %}
+            <label class="variant-block">
+                <input type="checkbox" name="item_ids"
+                    value="{{ item._id }}|{{ item.name }}|{{ v.name }}|{{ v.price }}">
+                {{ v.name }} - ${{ v.price }}
+                <input type="number" name="quantity_{{ item._id }}_{{ v.name }}" min="1" value="1">
+            </label>
+            {% endfor %}
+            {% else %}
+            <label class="variant-block">
+                <input type="checkbox" name="item_ids" value="{{ item._id }}|{{ item.name }}|None|{{ item.price }}">
+                ${{ item.price }}
+                <input type="number" name="quantity_{{ item._id }}" min="1" value="1">
+            </label>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <button type="submit" class="submit-btn">Submit Order</button>
+    </form>
+</div>
+
+{% endblock %}
