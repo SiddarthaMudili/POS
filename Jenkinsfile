@@ -8,12 +8,6 @@ pipeline {
   }
 
   stages {
-    stage('Checkout Code') {
-      steps {
-        git 'https://github.com/SiddarthaMudili/POS.git'
-      }
-    }
-    
     stage('Authenticate for Sudo') {
       steps {
         withCredentials([usernamePassword(credentialsId: 'sudo-creds', usernameVariable: 'SUDO_USER', passwordVariable: 'SUDO_PASS')]) {
