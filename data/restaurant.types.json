@@ -1,0 +1,12 @@
+[{
+  "_id": "veg",
+  "type": "Veg"
+},
+{
+  "_id": "non-veg",
+  "type": "Non-Veg"
+},
+{
+  "_id": "none",
+  "type": "None"
+}]

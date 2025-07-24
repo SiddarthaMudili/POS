@@ -1,12 +1,12 @@
 FROM python:3.10-slim AS flask-app
 
-WORKDIR /app
+WORKDIR /application
 
-COPY requirements.txt .
+COPY application/requirements.txt .
 
 RUN pip install -r requirements.txt
 
-COPY . .
+COPY application/. .
 
 EXPOSE 5000
 

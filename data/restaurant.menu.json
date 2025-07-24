@@ -1,0 +1,104 @@
+[{
+  "_id": "veg-manchow-soup",
+  "name": "Veg Manchow Soup",
+  "category_id": "soups",
+  "type_id": "veg",
+  "price": 70
+},
+{
+  "_id": "corn-soup",
+  "name": "Corn Soup",
+  "category_id": "soups",
+  "type_id": "veg",
+  "price": 80
+},
+{
+  "_id": "lemon-corriander-soup",
+  "name": "Lemon Corriander Soup",
+  "category_id": "soups",
+  "type_id": "veg",
+  "price": 100
+},
+{
+  "_id": "chicken-soup",
+  "name": "Chicken Soup",
+  "category_id": "soups",
+  "type_id": "non-veg",
+  "price": 100
+},
+{
+  "_id": "chicken-manchow-soup",
+  "name": "Chicken Manchow Soup",
+  "category_id": "soups",
+  "type_id": "non-veg",
+  "price": 100
+},
+{
+  "_id": "soft-drinks",
+  "name": "Soft Drinks",
+  "category_id": "beverages",
+  "type_id": "none",
+  "variants": [
+    {
+      "name": "Thumsup",
+      "price": 20
+    },
+    {
+      "name": "Pepsi",
+      "price": 20
+    },
+    {
+      "name": "Coke",
+      "price": 20
+    },
+    {
+      "name": "Sprite",
+      "price": 20
+    }
+  ]
+},
+{
+  "_id": "lassi",
+  "name": "Lassi",
+  "category_id": "beverages",
+  "type_id": "none",
+  "price": 30
+},
+{
+  "_id": "butter-milk",
+  "name": "Butter Milk",
+  "category_id": "beverages",
+  "type_id": "none",
+  "price": 20
+},
+{
+  "_id": "water-bottle",
+  "name": "Water Bottle",
+  "category_id": "beverages",
+  "type_id": "none",
+  "variants": [
+    {
+      "price": 10,
+      "name": "500ml"
+    },
+    {
+      "price": 20,
+      "name": "1l"
+    }
+  ]
+},
+{
+  "_id": "masala-drink",
+  "name": "Masala Drink",
+  "category_id": "beverages",
+  "type_id": "none",
+  "price": 20
+},
+{
+  "_id": "spl-veg-fried-rice",
+  "name": "Spl Veg Fried Rice",
+  "category_id": "specials",
+  "type_id": "veg",
+  "price": 140,
+  "day": "Saturday"
+}]

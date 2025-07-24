@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  flask-app:
+    build: .
+     
+    ports:
+      - "5000:5000"
+     
+    environment:
+      - MONGO_URI=${MONGO_URI}
+     
+    restart: always
+    networks:
+      - my_flask_network
+
+# Define the custom network
+networks:
+  my_flask_network:
+    # You can specify a driver if needed, 'bridge' is the default and usually sufficient
+    driver: bridge

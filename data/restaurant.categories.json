@@ -1,0 +1,36 @@
+[{
+  "_id": "soups",
+  "name": "Soups"
+},
+{
+  "_id": "beverages",
+  "name": "Beverages"
+},
+{
+  "_id": "starters",
+  "name": "Starters"
+},
+{
+  "_id": "curries",
+  "name": "Curries"
+},
+{
+  "_id": "meals",
+  "name": "Meals"
+},
+{
+  "_id": "rice_items",
+  "name": "Rice Items"
+},
+{
+  "_id": "biryanis",
+  "name": "Biryanis"
+},
+{
+  "_id": "fried_rice",
+  "name": "Fried Rice"
+},
+{
+  "_id": "tiffins",
+  "name": "Tiffins"
+}]
